@@ -8,7 +8,7 @@ class HttpClient
     @base_url
     @http
 
-    attr_accessor :base_url
+    attr_reader :base_url 
 
     def initialize(base_url, use_ssl = true)
         @base_url = base_url
@@ -22,29 +22,40 @@ class HttpClient
         path = path_with_params(path, params) if params.size > 0
         uri = URI.join(@base_url, path)
         request = Net::HTTP::Get.new(uri, headers)
-        http_response = @http.request(request)
-        handle(http_response)
-    rescue StandardError => error
-        error.message
+        http_response = request_response(request)
+        handle(http_response)    
     end
 
     def post()
+
     end
 
     def patch()
     end
 
-    private 
+    def use_ssl?
+        @http.use_ssl?
+    end
+
+    private
 
     def handle(http_response)
+        parsed_response = JSON.parse(http_response.body, :symbolize_names => true)              
+    rescue ClientError, ServerError, JSON::ParserError => error
+        { error: error.first.name } 
+    end
+
+    
+    def request_response(request)
+        http_response = @http.request(request)
         case http_response
         when Net::HTTPSuccess
-            response = JSON.parse(http_response.body, :symbolize_names => true)
+            http_response
         when Net::HTTPClientError
             raise ClientError, "[#{http_response.code}] #{http_response.class}"
         when Net::HTTPServerError
             raise ServerError, "[#{http_response.code}] #{http_response.class}"
-        end        
+        end  
     end
 
     def path_with_params(path, params)

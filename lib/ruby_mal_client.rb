@@ -6,8 +6,8 @@ require_relative "ruby_mal_client/mal/anime"
 module RubyMalClient
   class Error < StandardError; end
 
-  anime = Anime.new
+  #anime = Anime.new
 
-  animes = anime.get_anime
-  puts animes  
+  #animes = anime.get_anime
+  #puts animes  
 end
