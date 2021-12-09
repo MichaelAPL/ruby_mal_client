@@ -42,7 +42,7 @@ class HttpClient
     def handle(http_response)
         parsed_response = JSON.parse(http_response.body, :symbolize_names => true)              
     rescue ClientError, ServerError, JSON::ParserError => error
-        { error: error.first.name } 
+        { error: error.name } 
     end
 
     
