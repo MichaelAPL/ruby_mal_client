@@ -29,7 +29,7 @@ class HttpClient
     def post(path, headers = {}, params = {}, data)
         path = path_with_params(path, params) if params.size > 0
         uri = URI.join(@base_url, path)
-        request = Net::HTTP::Post.new(path, headers)
+        request = Net::HTTP::Post.new(uri, headers)
         request.set_form_data(data)
         http_response = request_response(request)
         handle(http_response) 

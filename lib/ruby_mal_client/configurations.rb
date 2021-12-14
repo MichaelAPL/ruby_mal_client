@@ -5,12 +5,13 @@ module Configurations
     
     #URLs
     MAL_API_URL = "https://api.myanimelist.net/v2/"
-    MAL_AUTH_URL = "https://myanimelist.net/v1/oauth2/token"
+    MAL_AUTH_URL = "https://myanimelist.net/v1/oauth2/"    
     
     #Auth non-required paths
     GET_ANIME_PATH = "anime"
     
     #Auth paths
-    GET_AUTH_USER_INFO_PATH = "@me"
+    GET_ACCESS_TOKEN_PATH = "token"
+    GET_AUTH_USER_INFO_PATH = "users/@me"
     GET_AUTH_USER_ANILIST_PATH = "#{GET_AUTH_USER_INFO_PATH}/animelist"
 end
