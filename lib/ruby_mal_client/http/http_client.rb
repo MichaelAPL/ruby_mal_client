@@ -26,8 +26,13 @@ class HttpClient
         handle(http_response)    
     end
 
-    def post()
-
+    def post(path, headers = {}, params = {}, data)
+        path = path_with_params(path, params) if params.size > 0
+        uri = URI.join(@base_url, path)
+        request = Net::HTTP::Post.new(path, headers)
+        request.set_form_data(data)
+        http_response = request_response(request)
+        handle(http_response) 
     end
 
     def patch()
@@ -40,7 +45,7 @@ class HttpClient
     private
 
     def handle(http_response)
-        parsed_response = JSON.parse(http_response.body, :symbolize_names => true)              
+        JSON.parse(http_response.body, :symbolize_names => true)              
     rescue ClientError, ServerError, JSON::ParserError => error
         { error: error.name } 
     end

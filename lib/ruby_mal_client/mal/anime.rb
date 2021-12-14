@@ -10,9 +10,7 @@ class Anime
     end
 
     def get_anime(params = { q:"two", limit: "10" })
-        get_anime_path = "anime"
         headers = {"X-MAL-CLIENT-ID" => MAL_CLIENT_ID, "Content-Type" => "application/json", "Accept" => "application/json"}
-
-        anime = @http.get(get_anime_path, headers, params)
+        @http.get(GET_ANIME_PATH, headers, params)
     end
 end

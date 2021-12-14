@@ -2,12 +2,15 @@
 
 require_relative "ruby_mal_client/version"
 require_relative "ruby_mal_client/mal/anime"
+require_relative "ruby_mal_client/mal/anime_list"
 
 module RubyMalClient
   class Error < StandardError; end
 
-  #anime = Anime.new
+  anime_list = AnimeList.new
 
-  #animes = anime.get_anime
-  #puts animes  
+  puts "Welcome to Ruby MAL Client"
+  puts "Please grant the GEM access to your profile using the following url: "
+
+  puts anime_list.auth_url
 end
