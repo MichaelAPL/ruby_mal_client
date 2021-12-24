@@ -3,9 +3,9 @@ require_relative "../auth/auth_client"
 
 module RubyMalClient
     class SimpleMALClient < GenericAnimeClient
-        def initialize             
-            @auth = RubyMalClient::AuthClient.new
-            super({})
+        def initialize
+            headers = {"X-MAL-CLIENT-ID" => RubyMalClient.configurations.client_id, "Content-Type" => "application/json", "Accept" => "application/json"}
+            super(headers)                         
         end
     end
 end
