@@ -9,16 +9,11 @@ module RubyMalClient
         GET_ANIME_RANKING_PATH = "#{GET_ANIME_PATH}/ranking"
         GET_ANIME_SEASON_PATH = "#{GET_ANIME_PATH}/season"
         GET_ANIME_SUGGESTIONS_PATH = "#{GET_ANIME_PATH}/suggestions"
-
         
         #Auth paths
         GET_ACCESS_TOKEN_PATH = "token"
         GET_AUTH_USER_INFO_PATH = "users/@me"
         GET_AUTH_USER_ANILIST_PATH = "#{GET_AUTH_USER_INFO_PATH}/animelist"      
-
-        #ID and Secret
-        MAL_CLIENT_ID = "ab75fe72617c2d1ab411e46bb31c144f"
-        MAL_CLIENT_SECRET = "38b7e9b0a3398486f06f201904fa3622c7f19f66809fc98b1d2c8e362c3276da"
 
         #Others
         ANIME_DETAILS_FIELDS = [

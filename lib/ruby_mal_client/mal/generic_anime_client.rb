@@ -18,7 +18,7 @@ module RubyMalClient
 
         def get_anime_list(username = nil, params = {})
             path = username == nil ? RubyMalClient::Configurations::GET_AUTH_USER_ANILIST_PATH : RubyMalClient::Configurations.username_anilist_path(username)
-            @http.get(RubyMalClient::Configurations::GET_ANIME_PATH, @headers, params)
+            @http.get(path, @headers, params)
         end
 
         def get_anime_details(anime_id, fields)
