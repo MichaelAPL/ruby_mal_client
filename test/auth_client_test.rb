@@ -1,5 +1,6 @@
 require "test_helper"
-require_relative "../lib/ruby_mal_client/mal/auth_client"
+require "vcr"
+require_relative "../lib/ruby_mal_client/auth/auth_client"
 
 class AuthClientTest < Minitest::Test
     def test_auth_client_must_exists
@@ -35,6 +36,14 @@ class AuthClientTest < Minitest::Test
             auth_client = RubyMalClient::AuthClient.new
             auth_client.generate_access_token
         end
-    end    
+    end
+    
+    def test_generate_access_tokens_brings_a_token
+        assert true
+    end
+
+    def test_refresh_tokens_brings_a_new_access_token
+        assert true
+    end
     
 end

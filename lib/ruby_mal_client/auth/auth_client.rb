@@ -1,4 +1,5 @@
-require 'securerandom'
+require "securerandom"
+require_relative "../configurations"
 require_relative "../../errors"
 
 module RubyMalClient

@@ -3,9 +3,6 @@ require 'json'
 
 module RubyMalClient
     class HttpClient 
-        @base_url
-        @http
-
         attr_reader :base_url 
 
         def initialize(base_url, use_ssl = true)
@@ -17,23 +14,46 @@ module RubyMalClient
         end
 
         def get(path, headers = {}, params = {})
-            path = path_with_params(path, params) if params.size > 0
-            uri = URI.join(@base_url, path)
-            request = Net::HTTP::Get.new(uri, headers)
-            http_response = request_response(request)
-            handle(http_response)    
+            request_type = Net::HTTP::Get
+            request_data = {
+                path: path,
+                headers: headers,
+                params: params
+            }
+            request_response(request_type, request_data)
         end
 
         def post(path, headers = {}, params = {}, data)
-            path = path_with_params(path, params) if params.size > 0
-            uri = URI.join(@base_url, path)
-            request = Net::HTTP::Post.new(uri, headers)
-            request.set_form_data(data)
-            http_response = request_response(request)
-            handle(http_response) 
+            request_type = Net::HTTP::Post
+            request_data = {
+                path: path,
+                headers: headers,
+                params: params,
+                data: data
+            }
+            request_response(request_type, request_response)
         end
 
-        def patch()
+        def patch(path, headers = {}, params = {}, data)
+            request_type = Net::HTTP::Patch
+            request_data = {
+                path: path,
+                headers: headers,
+                params: params,
+                data: data
+            }
+            request_response(request_type, request_response)
+        end
+
+        def delete(path, headers = {}, params = {}, data)
+            request_type = Net::HTTP::Delete
+            request_data = {
+                path: path,
+                headers: headers,
+                params: params,
+                data: data
+            }
+            request_response(request_type, request_response)
         end
 
         def use_ssl?
@@ -41,23 +61,26 @@ module RubyMalClient
         end
 
         private
-
-        def handle(http_response)
-            JSON.parse(http_response.body, :symbolize_names => true)              
-        rescue ClientError, ServerError, JSON::ParserError => error
-            { error: error.name } 
-        end
-
         
-        def request_response(request)
+        def request_response(request_type, request_data)
+            path = path_with_params(path, request_data[:params]) if request_data[:params].size > 0
+            uri = URI.join(@base_url, request_data[:path])
+            request = request_type.new(uri, request_data[:headers])
+            request.set_form_data(request_data[:data]) if request_data[:data] != nil
+            handle(request)
+        end        
+        
+        def handle(request)
             http_response = @http.request(request)
             case http_response
             when Net::HTTPSuccess
-                http_response
+                JSON.parse(http_response.body, :symbolize_names => true)   
             when Net::HTTPClientError
-                raise ClientError, "[#{http_response.code}] #{http_response.class}"
+                raise ClientError, "Error code: [#{http_response.code}]. Message: #{http_response.class}"
             when Net::HTTPServerError
-                raise ServerError, "[#{http_response.code}] #{http_response.class}"
+                raise ServerError, "Error code: [#{http_response.code}]. Message: #{http_response.class}"
+            when Net::HTTPNotFound
+                raise ServerError, "Error code: [#{http_response.code}]. Message: #{http_response.class}"
             end  
         end
 
