@@ -14,6 +14,11 @@ puts "Anime details:"
 anime_detail_fields = RubyMalClient::Configurations.anime_details_fields
 puts simple_mal_client.get_anime_details("30230", anime_detail_fields)
 
+puts "Anime Ranking:"
+puts simple_mal_client.get_anime_ranking
+
+puts "Seasonal anime:"
+puts simple_mal_client.get_seasonal_anime
 #puts "Please grant access to your profile by using the following url: #{anime_list.auth_url}"
 #puts "Once you have granted access please paste your access code here:"
 #auth_code = gets.chomp.to_s
