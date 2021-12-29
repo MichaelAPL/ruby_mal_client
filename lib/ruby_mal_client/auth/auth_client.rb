@@ -27,24 +27,15 @@ module RubyMalClient
         def refresh_access_token
             headers = urlencoded_header
             data = data_body("refresh_token")
+            response = @http.post(RubyMalClient::Configurations::GET_ACCESS_TOKEN_PATH, headers, data, data)
             @access_token = response[:access_token]
-        end
-
-        def get_user_info 
-            header = bearer_token_header
-            @http.get(RubyMalClient::Configurations::GET_AUTH_USER_INFO_PATH, header)
-        end
+        end        
 
         def auth_url
-            configurations = RubyMalClient::Configurations
-            "#{configurations::MAL_AUTH_URL}authorize?response_type=code&client_id=#{configurations::MAL_CLIENT_ID}&code_challenge=#{@code_verifier}"
+            "#{RubyMalClient::Configurations::MAL_AUTH_URL}authorize?response_type=code&client_id=#{RubyMalClient.configurations.client_id}&code_challenge=#{@code_verifier}"
         end
 
-        private 
-
-        def bearer_token_header
-            {"Authorization" => "Bearer #{@access_token}"}
-        end
+        private         
 
         def urlencoded_header 
             {"Content-Type" => "application/x-www-form-urlencoded"}

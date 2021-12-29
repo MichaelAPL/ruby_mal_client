@@ -31,7 +31,7 @@ module RubyMalClient
                 params: params,
                 data: data
             }
-            request_response(request_type, request_response)
+            request_response(request_type, request_data)
         end
 
         def patch(path, headers = {}, params = {}, data)
@@ -42,10 +42,10 @@ module RubyMalClient
                 params: params,
                 data: data
             }
-            request_response(request_type, request_response)
+            request_response(request_type, request_data)
         end
 
-        def delete(path, headers = {}, params = {}, data)
+        def delete(path, headers = {}, params = {}, data = nil)
             request_type = Net::HTTP::Delete
             request_data = {
                 path: path,
@@ -53,7 +53,7 @@ module RubyMalClient
                 params: params,
                 data: data
             }
-            request_response(request_type, request_response)
+            request_response(request_type, request_data)
         end
 
         def use_ssl?

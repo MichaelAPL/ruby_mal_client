@@ -2,6 +2,8 @@ module RubyMalClient
     class ClientError < StandardError; end
     class ServerError < StandardError; end    
     class AuthCodeNotFoundError < StandardError; end
+    class InvalidTokenError < StandardError; end
+    class ExpiredTokenError < StandardError; end
     
     class ClientIdNotFoundError < StandardError
         def initialize(msg = "MAL Client ID is missing. Request and add your Client ID in configurations")

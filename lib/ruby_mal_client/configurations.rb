@@ -31,6 +31,14 @@ module RubyMalClient
             summer: ["July", "August", "September"],
             fall: ["October", "November", "December"]
         }
+
+        ANIME_LIST_ITEM_STATUSES = {
+            watching: "watching",
+            completed: "completed",
+            on_hold: "on_hold",
+            dropped: "dropped",
+            plan_to_watch: "plan_to_watch"
+        }
         
         attr_accessor :client_id, :client_secret
         
@@ -41,6 +49,10 @@ module RubyMalClient
         
         def self.username_anilist_path(username)
             "users/#{username}/animelist"
+        end
+
+        def self.my_list_status_path(anime_id)
+            "anime/#{anime_id}/my_list_status"
         end
 
         def self.anime_details_fields 

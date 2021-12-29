@@ -16,7 +16,7 @@ module RubyMalClient
             @http.get(RubyMalClient::Configurations::GET_ANIME_PATH, @headers, params)
         end
 
-        def get_anime_list(username = nil, params = {})
+        def get_anime_list(username: nil, params: {})
             path = username == nil ? RubyMalClient::Configurations::GET_AUTH_USER_ANILIST_PATH : RubyMalClient::Configurations.username_anilist_path(username)
             @http.get(path, @headers, params)
         end
@@ -45,7 +45,7 @@ module RubyMalClient
         private
 
         def current_season(month)
-            RubyMalClient::Configurations::ANIME_SEASONS.find { |k, v| v.include? month }[0].to_s
+            RubyMalClient::Configurations::SEASONS_MONTHS.find { |k, v| v.include? month }[0].to_s
         end
     end
 end
