@@ -15,14 +15,14 @@ module RubyMalClient
         GET_AUTH_USER_INFO_PATH = "users/@me"
         GET_AUTH_USER_ANILIST_PATH = "#{GET_AUTH_USER_INFO_PATH}/animelist"      
 
-        #Others
+        #Others        
         ANIME_DETAILS_FIELDS = [
-            :id, :title, :main_picture, :alternative_titles, :start_date, :end_date, 
-            :synopsis, :mean, :rank, :popularity, :num_list_users, :num_scoring_users, 
-            :nsfw, :created_at, :created_at, :updated_at, :media_type, :status, :genres,
-            :num_episodes, :start_season, :broadcast, :source, :average_episode_duration,
-            :rating, :pictures, :background, :related_anime, :related_manga, :recommendations,
-            :studios, :statistics
+            "id", "title", "main_picture", "alternative_titles", "start_date", "end_date", 
+            "synopsis", "mean", "rank", "popularity", "num_list_users", "num_scoring_users", 
+            "nsfw", "created_at", "updated_at", "media_type", "status", "genres",
+            "num_episodes", "start_season", "broadcast", "source", "average_episode_duration",
+            "rating", "pictures", "background", "related_anime", "related_manga", "recommendations",
+            "studios", "statistics"
         ]
 
         SEASONS_MONTHS = {
@@ -55,10 +55,8 @@ module RubyMalClient
             "anime/#{anime_id}/my_list_status"
         end
 
-        def self.anime_details_fields 
-            fields = {}
-            ANIME_DETAILS_FIELDS.each { |field| fields[field] = true }
-            fields
+        def self.formatted_anime_details_fields(fields = ANIME_DETAILS_FIELDS) 
+            fields.join(",")
         end
     end
 
