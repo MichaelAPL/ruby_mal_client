@@ -16,4 +16,22 @@ module RubyMalClient
             super
         end
     end
+
+    class AccessTokenNotFoundError < StandardError
+        def initialize(msg = "Access Token has not been generated yet. Try with RubyMalClient::MALClient.authorize")
+            super
+        end
+    end
+
+    class InvalidYearError < StandardError
+        def initialize(msg = "Year is not valid, use a valid year")
+            super
+        end
+    end
+
+    class InvalidSeasonError < StandardError
+        def initialize(msg = "Season is not valid, check in RubyMalClient::Configurations::SEASONS_MONTHS for valid seasons")
+            super
+        end
+    end
 end
