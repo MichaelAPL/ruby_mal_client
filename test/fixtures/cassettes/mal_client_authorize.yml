@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://myanimelist.net/v1/oauth2/token?client_id=ab75fe72617c2d1ab411e46bb31c144f&client_secret=38b7e9b0a3398486f06f201904fa3622c7f19f66809fc98b1d2c8e362c3276da&code=def502003f48abfd472bdf9874f09da4194ae3cbe51eeb2e63f3a995929d53b92c73ac99e3453dbcee5ac04e23cf709d6c3a33aa0fa4203dc862cb81128e247be9e038b5f904a1312af5f42c6e42208fe2f61571df4c2c8b938ea68513693f4f79092e044c783087f32292e8932686359fb1d0d9b2c9602e0fde103da60ef7c3d06e28d1c5978e9945414ee42ec1c966763b19bfd287ec7e10875f8e8bdb6fa703fad0e8f8f1c1fd82f3e70136d6a1bccea604d8bb007c0685c946d0c1fd3862a57d13a908290412d24b0201fc2af67eb3fc38febc8bce096cd38fbb2ae6cae24014f46efb9841ded1ccb0968f86883fac23a6b54c1429ca49d9d5588f21c1032a706baf4f7f988f0d10b9be5be08c2d4a44705f938627cb3dbcde712a81352fd70b8e400258f017702b2fbd6f07ea816648865474845e6ce407015fcbc16bacb94f24fa7b8ccbdb914c28c2cfa1c6b84e7f028c910136cbd3e338de341cd761dd6e6d8c968186b492ab88f0768d6a7640b1797ba3aaafc842c2653c9970897cdac2c19ca6e7e11bff0c1f6b330dac46eff23d6e013f4ce5bc616115ee3d9505a0d2c22e326f62e589bbc7c32402c86d21f016844b3d066f37953d9a750ba8dd157c97077408e0eaecde6042de&code_verifier=I0Fp4XFTdiJzJxYVjgEiQhZHIVqi9jGdBXekEkxYv3jKpvX5r0BBiHTYj5OCRf4foSAZBlh77AtrumVMwP54S3E7LxGwL4Ao5CUU&grant_type=authorization_code
+    body:
+      encoding: US-ASCII
+      string: client_id=ab75fe72617c2d1ab411e46bb31c144f&client_secret=38b7e9b0a3398486f06f201904fa3622c7f19f66809fc98b1d2c8e362c3276da&grant_type=authorization_code&code=def502003f48abfd472bdf9874f09da4194ae3cbe51eeb2e63f3a995929d53b92c73ac99e3453dbcee5ac04e23cf709d6c3a33aa0fa4203dc862cb81128e247be9e038b5f904a1312af5f42c6e42208fe2f61571df4c2c8b938ea68513693f4f79092e044c783087f32292e8932686359fb1d0d9b2c9602e0fde103da60ef7c3d06e28d1c5978e9945414ee42ec1c966763b19bfd287ec7e10875f8e8bdb6fa703fad0e8f8f1c1fd82f3e70136d6a1bccea604d8bb007c0685c946d0c1fd3862a57d13a908290412d24b0201fc2af67eb3fc38febc8bce096cd38fbb2ae6cae24014f46efb9841ded1ccb0968f86883fac23a6b54c1429ca49d9d5588f21c1032a706baf4f7f988f0d10b9be5be08c2d4a44705f938627cb3dbcde712a81352fd70b8e400258f017702b2fbd6f07ea816648865474845e6ce407015fcbc16bacb94f24fa7b8ccbdb914c28c2cfa1c6b84e7f028c910136cbd3e338de341cd761dd6e6d8c968186b492ab88f0768d6a7640b1797ba3aaafc842c2653c9970897cdac2c19ca6e7e11bff0c1f6b330dac46eff23d6e013f4ce5bc616115ee3d9505a0d2c22e326f62e589bbc7c32402c86d21f016844b3d066f37953d9a750ba8dd157c97077408e0eaecde6042de&code_verifier=I0Fp4XFTdiJzJxYVjgEiQhZHIVqi9jGdBXekEkxYv3jKpvX5r0BBiHTYj5OCRf4foSAZBlh77AtrumVMwP54S3E7LxGwL4Ao5CUU
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - myanimelist.net
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 30 Dec 2021 02:09:23 GMT
+      Server:
+      - Apache
+      Set-Cookie:
+      - MALHLOGSESSID=0dd11b7410707f7eb034ab7c6937e28e; expires=Tue, 29-Dec-2026 02:09:23
+        GMT; Max-Age=157680000; path=/
+      - MALSESSIONID=5pkk0jcqt5magnu4arni5t1kj5; expires=Sun, 28-Dec-2031 02:09:23
+        GMT; Max-Age=315360000; path=/; secure; HttpOnly
+      Cache-Control:
+      - no-cache, private
+      Pragma:
+      - no-cache
+      Referrer-Policy:
+      - same-origin
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 0b411dbb186753d7d6bc75c4c3de15a0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DFW3-C1
+      X-Amz-Cf-Id:
+      - tuHfseDO2k4yEvS156FCWVOsW4ToEu4Nyo3-KH9yAcIODPWyvfWpQA==
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"Bearer","expires_in":2678400,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE0MzRkZTRmZDU5MTk0Nzk3YjhhOGY4NmVkMTZiZTc2MjdjMmZjOGY4OGQ0MzcwZWQ5ODFlZDk2MjEwNDNmYjc5YzdhZTYxMzJkMWRjY2M5In0.eyJhdWQiOiJhYjc1ZmU3MjYxN2MyZDFhYjQxMWU0NmJiMzFjMTQ0ZiIsImp0aSI6ImE0MzRkZTRmZDU5MTk0Nzk3YjhhOGY4NmVkMTZiZTc2MjdjMmZjOGY4OGQ0MzcwZWQ5ODFlZDk2MjEwNDNmYjc5YzdhZTYxMzJkMWRjY2M5IiwiaWF0IjoxNjQwODMwMzc1LCJuYmYiOjE2NDA4MzAzNzUsImV4cCI6MTY0MzUwODc3NSwic3ViIjoiMjYyMTU1NyIsInNjb3BlcyI6W119.GK0TP3k4fd_r73xiwWspBFHhsxKFyL1kI_VWDRzMDWks0_jGqLk7kkfnrs7aHBEPPi4NE8aqVQfHV1gwT0TGeuR3pD2ylbrbhweaUcAzut36g98SJ32WsMkky07RYqigbU6Z8nItCiHwKXpoRCVUyocYqjCNRA5Xs_01GAI3PuzamrkdWi5agQRy-bPIWmC4pvJCaMyC_7RFO1DfhTFCQQAD75BlB1V7JhGJ2GqifCCiUOc735vjLFOKaq2Bh6wob3B84vWQIhze0sGo-Z3ZL6Gi0g8J9kh0dn7rvqPrwWABH4Sk9-Cg1Faz-BXx0dpBjwc7qgEpH8NDbzVSS-pjuw","refresh_token":"def50200bfbdf0f02569b5c1fbcc7c1b9c2760d93fdc0e058951885170ea07586b3da4017c41fc11152ce95d0f4c23623a86a3a10de23dfbd5e8e4ecb691f7cb2489092d731c7c2d7d4bb5d9180d7538c174b7746d74000e5cdc86b4ad82c2d4cc7f563652b72c123673681636a8104f7978a848bf0d6e7b0012bc3549072871e9d6a98ef48535cd466a7f849943a1df046d45967dcc126b754166fadc1489e407c17cc607261a00f1d1d0fd5e62f624a177d1b5ae565bc13774ffc1651912a804e530ef686d76b5dd4bef64013536aed0a8dca62e6074fe2b08c087e522c49cf55eebcf508a9fb8ce86ae9510e6a5807d0a7e36f79fed0be29dcfc8f7932e77cfe1f25bb9baaa2baa459e254b8fdd02954b967b8234bd557cefe77c6d473fa848b2356f4165d7311352afd1a4f650878dc37121cf134ccc15cb9c0e34063789b577e91752a00d7c80f8d56603ec0d90e0a4985272aa8c6503b38c9600ec03bf74539474094e852aec3bd2bf3fd086305ce5cbbd82d0c9ec76c37d60d30ecfd9755f59c1722ec2fb"}'
+  recorded_at: Thu, 30 Dec 2021 02:09:23 GMT
+- request:
+    method: get
+    uri: https://api.myanimelist.net/v2/users/@me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE0MzRkZTRmZDU5MTk0Nzk3YjhhOGY4NmVkMTZiZTc2MjdjMmZjOGY4OGQ0MzcwZWQ5ODFlZDk2MjEwNDNmYjc5YzdhZTYxMzJkMWRjY2M5In0.eyJhdWQiOiJhYjc1ZmU3MjYxN2MyZDFhYjQxMWU0NmJiMzFjMTQ0ZiIsImp0aSI6ImE0MzRkZTRmZDU5MTk0Nzk3YjhhOGY4NmVkMTZiZTc2MjdjMmZjOGY4OGQ0MzcwZWQ5ODFlZDk2MjEwNDNmYjc5YzdhZTYxMzJkMWRjY2M5IiwiaWF0IjoxNjQwODMwMzc1LCJuYmYiOjE2NDA4MzAzNzUsImV4cCI6MTY0MzUwODc3NSwic3ViIjoiMjYyMTU1NyIsInNjb3BlcyI6W119.GK0TP3k4fd_r73xiwWspBFHhsxKFyL1kI_VWDRzMDWks0_jGqLk7kkfnrs7aHBEPPi4NE8aqVQfHV1gwT0TGeuR3pD2ylbrbhweaUcAzut36g98SJ32WsMkky07RYqigbU6Z8nItCiHwKXpoRCVUyocYqjCNRA5Xs_01GAI3PuzamrkdWi5agQRy-bPIWmC4pvJCaMyC_7RFO1DfhTFCQQAD75BlB1V7JhGJ2GqifCCiUOc735vjLFOKaq2Bh6wob3B84vWQIhze0sGo-Z3ZL6Gi0g8J9kh0dn7rvqPrwWABH4Sk9-Cg1Faz-BXx0dpBjwc7qgEpH8NDbzVSS-pjuw
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.myanimelist.net
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 30 Dec 2021 02:27:57 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Robots-Tag:
+      - noindex,nofollow
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 7e8b1c0ba2e1c4800a6624214f6be266.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DFW3-C1
+      X-Amz-Cf-Id:
+      - eOKmBL1WnJ3AHGKVrbhNJNflnePa6edaJd3uIxCnN8XdJkNdFHj2Ow==
+    body:
+      encoding: UTF-8
+      string: '{"id":2621557,"name":"Michael_APL","gender":"male","birthday":"1996-01-27","location":"Mexico","joined_at":"2013-05-26T02:06:44+00:00","picture":"https:\/\/api-cdn.myanimelist.net\/images\/userimages\/2621557.jpg?t=1640831400"}'
+  recorded_at: Thu, 30 Dec 2021 02:27:57 GMT
+recorded_with: VCR 6.0.0

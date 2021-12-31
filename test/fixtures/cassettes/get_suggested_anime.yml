@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.myanimelist.net/v2/anime/suggestions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.myanimelist.net
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 31 Dec 2021 19:05:22 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Robots-Tag:
+      - noindex,nofollow
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 7e8b1c0ba2e1c4800a6624214f6be266.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DFW3-C1
+      X-Amz-Cf-Id:
+      - eOKmBL1WnJ3AHGKVrbhNJNflnePa6edaJd3uIxCnN8XdJkNdFHj2Ow==
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"node":{"id":597,"title":"Neko no Ongaeshi","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1\/597.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1\/597l.jpg"}}},{"node":{"id":34914,"title":"New Game!!","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/86790.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/86790l.jpg"}}},{"node":{"id":1961,"title":"Arashi no Yoru ni","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/5064.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/5064l.jpg"}}},{"node":{"id":488,"title":"Ichigo Mashimaro","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/10\/11042.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/10\/11042l.jpg"}}},{"node":{"id":37985,"title":"Aggressive Retsuko (ONA) 2nd Season","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1739\/101117.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1739\/101117l.jpg"}}},{"node":{"id":7592,"title":"Nurarihyon no Mago","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/75631.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/75631l.jpg"}}},{"node":{"id":25303,"title":"Haikyuu!!: Lev Genzan!","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1498\/96643.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1498\/96643l.jpg"}}},{"node":{"id":6591,"title":"Rurouni Kenshin DVD-BOX Special Ending","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/25808.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/25808l.jpg"}}},{"node":{"id":1824,"title":"Hadashi no Gen","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1873\/98756.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1873\/98756l.jpg"}}},{"node":{"id":40082,"title":"Lupin III: The First","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1572\/108506.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1572\/108506l.jpg"}}}],"paging":{"next":"https:\/\/api.myanimelist.net\/v2\/anime\/suggestions?offset=10"}}'
+  recorded_at: Fri, 31 Dec 2021 19:05:22 GMT
+recorded_with: VCR 6.0.0

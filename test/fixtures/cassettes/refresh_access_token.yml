@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://myanimelist.net/v1/oauth2/token?client_id=ab75fe72617c2d1ab411e46bb31c144f&client_secret=38b7e9b0a3398486f06f201904fa3622c7f19f66809fc98b1d2c8e362c3276da&grant_type=refresh_token&refresh_token=def50200bfbdf0f02569b5c1fbcc7c1b9c2760d93fdc0e058951885170ea07586b3da4017c41fc11152ce95d0f4c23623a86a3a10de23dfbd5e8e4ecb691f7cb2489092d731c7c2d7d4bb5d9180d7538c174b7746d74000e5cdc86b4ad82c2d4cc7f563652b72c123673681636a8104f7978a848bf0d6e7b0012bc3549072871e9d6a98ef48535cd466a7f849943a1df046d45967dcc126b754166fadc1489e407c17cc607261a00f1d1d0fd5e62f624a177d1b5ae565bc13774ffc1651912a804e530ef686d76b5dd4bef64013536aed0a8dca62e6074fe2b08c087e522c49cf55eebcf508a9fb8ce86ae9510e6a5807d0a7e36f79fed0be29dcfc8f7932e77cfe1f25bb9baaa2baa459e254b8fdd02954b967b8234bd557cefe77c6d473fa848b2356f4165d7311352afd1a4f650878dc37121cf134ccc15cb9c0e34063789b577e91752a00d7c80f8d56603ec0d90e0a4985272aa8c6503b38c9600ec03bf74539474094e852aec3bd2bf3fd086305ce5cbbd82d0c9ec76c37d60d30ecfd9755f59c1722ec2fb
+    body:
+      encoding: US-ASCII
+      string: client_id=ab75fe72617c2d1ab411e46bb31c144f&client_secret=38b7e9b0a3398486f06f201904fa3622c7f19f66809fc98b1d2c8e362c3276da&grant_type=refresh_token&refresh_token=def50200bfbdf0f02569b5c1fbcc7c1b9c2760d93fdc0e058951885170ea07586b3da4017c41fc11152ce95d0f4c23623a86a3a10de23dfbd5e8e4ecb691f7cb2489092d731c7c2d7d4bb5d9180d7538c174b7746d74000e5cdc86b4ad82c2d4cc7f563652b72c123673681636a8104f7978a848bf0d6e7b0012bc3549072871e9d6a98ef48535cd466a7f849943a1df046d45967dcc126b754166fadc1489e407c17cc607261a00f1d1d0fd5e62f624a177d1b5ae565bc13774ffc1651912a804e530ef686d76b5dd4bef64013536aed0a8dca62e6074fe2b08c087e522c49cf55eebcf508a9fb8ce86ae9510e6a5807d0a7e36f79fed0be29dcfc8f7932e77cfe1f25bb9baaa2baa459e254b8fdd02954b967b8234bd557cefe77c6d473fa848b2356f4165d7311352afd1a4f650878dc37121cf134ccc15cb9c0e34063789b577e91752a00d7c80f8d56603ec0d90e0a4985272aa8c6503b38c9600ec03bf74539474094e852aec3bd2bf3fd086305ce5cbbd82d0c9ec76c37d60d30ecfd9755f59c1722ec2fb
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - myanimelist.net
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 30 Dec 2021 23:11:03 GMT
+      Server:
+      - Apache
+      Set-Cookie:
+      - MALHLOGSESSID=19b7130ac018375810fdd27344431d96; expires=Tue, 29-Dec-2026 23:11:03
+        GMT; Max-Age=157680000; path=/
+      - MALSESSIONID=15oo5bobkh60v1147rao4774h5; expires=Sun, 28-Dec-2031 23:11:03
+        GMT; Max-Age=315360000; path=/; secure; HttpOnly
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, private
+      Referrer-Policy:
+      - same-origin
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 701c63f6792a5552e5b94eca49587b55.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - QRO50-C1
+      X-Amz-Cf-Id:
+      - POQvgL3d9scFycy-4T8CfXuOaMDu0j7vUhIdEeyFG2MSGdkMRCzHkA==
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"Bearer","expires_in":2678400,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjY3MzdiMTE1ZWMyOTI1NWUzMDY0YzI5YTg2ZjdmMjFkMTkzZjg3MjgzOWIzMjNiOGEwMzZkODhjYTkwYmI2OWM4YTFjNGE1N2RhNWE4YjUyIn0.eyJhdWQiOiJhYjc1ZmU3MjYxN2MyZDFhYjQxMWU0NmJiMzFjMTQ0ZiIsImp0aSI6IjY3MzdiMTE1ZWMyOTI1NWUzMDY0YzI5YTg2ZjdmMjFkMTkzZjg3MjgzOWIzMjNiOGEwMzZkODhjYTkwYmI2OWM4YTFjNGE1N2RhNWE4YjUyIiwiaWF0IjoxNjQwOTA1ODYzLCJuYmYiOjE2NDA5MDU4NjMsImV4cCI6MTY0MzU4NDI2Mywic3ViIjoiMjYyMTU1NyIsInNjb3BlcyI6W119.EAO1ZgCjsMwfaRIlMzzHFmDI9D5ZqB5EYKjRk47FFzCEK2YeWzJ_I2y6rh0u0IKfAj-B5cXoRtFTbSOdWxK5USueZh3v3-x03puQ8UorrBGj_sdDaVfQi-9ZMYyZyw7L7MjvsZdj65KZGa-cYgDFFYk_9vUuknU5RAN1Zmi9sgeYJgHWBXt5HhSIZbADiHIu2ybs6uN9Qk5EvxXOxU9Opps8JS93azHjXuEnvZ7a2oclAFPexPlOpAcl5mWmyo1Q6PmpeT0gLijQB_D3imvfCQUIGbEDGCO3uY92unQ6RxJjjo3DpO4wq6jiYFyp2ssnEqC8iLShZxwCrf03ix-_yg","refresh_token":"def502008b03118601c86e844e9550e7590a563b0f1a1475e5e4c163da3b4511fb94ba056aeae2f5946574f9039e9fc1d2fa0f0b58f95659fa2102764df9e8605973c2e03407508b09986201b35f59f960287d074f30eb96005d18f100766b28e9482e600b06aabf9513b4a0c50d443869d6ebdee27f7f412090ab3c9316cb2e04d70d201ec495d1df0e528c5d42521ee0ff3220d49887b66630e009a987f040831816554c76b90b42c6da3fbbc4fb2f499c99fd0c0e1cd9c3f7324ce4ca98d7bfdd34a15833b3efa602d9d546405389c35e16fe2c70f5270bf4bf7c708f541b6702988a31af2f5476d9080a7a369bc2ed24e018a5347a9188bfe0b3b28622d48c1877989858ca77c4a4e6e0eff112dc7b1b6cc8ca2d59c8164556e553ff69669b381a6dbfa968847ec266045f604cb1f31d42f03014e035147228e7f590b34d8b612b1224744d348247be15d1c371b9a4aa8bf3451fce202560bfabb78b42c2876eb8356eb3fe500115068f3eaca917bf38b7c7a1e08bcc2732693b399c94fcce7eb85bb9a5dd64"}'
+  recorded_at: Thu, 30 Dec 2021 23:11:03 GMT
+recorded_with: VCR 6.0.0

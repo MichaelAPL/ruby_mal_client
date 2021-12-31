@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.myanimelist.net/v2/anime/season/2021/fall
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Mal-Client-Id:
+      - ab75fe72617c2d1ab411e46bb31c144f
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Host:
+      - api.myanimelist.net
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 31 Dec 2021 04:09:56 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Robots-Tag:
+      - noindex,nofollow
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 fbeb3c11f48a12ec445d87ae00692840.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DFW3-C1
+      X-Amz-Cf-Id:
+      - gd85GP_LmrUFxEaA8WB1uTDcKMnmDalprtYofCgrlQRoKj6SjtU8XA==
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"node":{"id":21,"title":"One Piece","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/6\/73245.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/6\/73245l.jpg"}}},{"node":{"id":50325,"title":"Kaguya-sama
+        wa Kokurasetai: Ultra Romantic Teaser PV - Ishigami Yuu wa Kataritai","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1265\/119435.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1265\/119435l.jpg"}}},{"node":{"id":44940,"title":"World
+        Trigger 3rd Season","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1617\/117474.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1617\/117474l.jpg"}}},{"node":{"id":45576,"title":"Mushoku
+        Tensei: Isekai Ittara Honki Dasu Part 2","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1028\/117777.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1028\/117777l.jpg"}}},{"node":{"id":49701,"title":"Doupo
+        Cangqiong: San Nian Zhi Yue","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1029\/118861.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1029\/118861l.jpg"}}},{"node":{"id":40834,"title":"Ousama
+        Ranking","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1347\/117616.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1347\/117616l.jpg"}}},{"node":{"id":44275,"title":"Selection
+        Project","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1174\/113554.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1174\/113554l.jpg"}}},{"node":{"id":48453,"title":"Super
+        Crooks","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1579\/118015.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1579\/118015l.jpg"}}},{"node":{"id":44273,"title":"Mewkledreamy
+        Mix!","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1313\/112427.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1313\/112427l.jpg"}}},{"node":{"id":48804,"title":"Isekai
+        Shokudou 2","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1777\/117885.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1777\/117885l.jpg"}}}],"paging":{"next":"https:\/\/api.myanimelist.net\/v2\/anime\/season\/2021\/fall?offset=10"},"season":{"year":2021,"season":"fall"}}'
+  recorded_at: Fri, 31 Dec 2021 04:09:56 GMT
+recorded_with: VCR 6.0.0

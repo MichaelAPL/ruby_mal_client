@@ -31,7 +31,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 31 Dec 2021 00:22:47 GMT
+      - Wed, 29 Dec 2021 22:08:07 GMT
       Server:
       - Apache
       Cache-Control:
@@ -45,11 +45,11 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 430c98a561662ce110d7e2e105bbcbed.cloudfront.net (CloudFront)
+      - 1.1 59b18e94cdbd74e6e6557d7131e02ebd.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DFW3-C1
       X-Amz-Cf-Id:
-      - KUtUdNy1c-qIvyRVouFufaIeJKLLZUqgLCgZ1Ccx9fTHj2WFIVPJuw==
+      - CzwzbVsMbo0oFwhTx6Hv2vAS3lI8CvEGDGsvaSacgEnWgEj3heuPYw==
     body:
       encoding: UTF-8
       string: '{"data":[{"node":{"id":36009,"title":"Two Car","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/3\/88291.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/3\/88291l.jpg"}}},{"node":{"id":34422,"title":"Two
@@ -58,8 +58,8 @@ http_interactions:
         Two","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1245\/108365.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1245\/108365l.jpg"}}},{"node":{"id":38573,"title":"Tsuujou
         Kougeki ga Zentai Kougeki de Ni-kai Kougeki no Okaasan wa Suki Desu ka?","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1225\/102250.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1225\/102250l.jpg"}}},{"node":{"id":1786,"title":"Sprite:
         Between Two Worlds","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1099\/96357.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1099\/96357l.jpg"}}},{"node":{"id":23989,"title":"Maken-Ki!
-        Two Specials","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/7\/62209.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/7\/62209l.jpg"}}},{"node":{"id":1594,"title":"Jigoku
-        Shoujo Futakomori","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/5\/86975.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/5\/86975l.jpg"}}},{"node":{"id":2728,"title":"TWO-MIX:
-        White Reflection","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/34687.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/34687l.jpg"}}}],"paging":{"next":"https:\/\/api.myanimelist.net\/v2\/anime?offset=10&q=two&limit=10"}}'
-  recorded_at: Fri, 31 Dec 2021 00:22:47 GMT
+        Two Specials","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/7\/62209.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/7\/62209l.jpg"}}},{"node":{"id":2728,"title":"TWO-MIX:
+        White Reflection","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/34687.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/34687l.jpg"}}},{"node":{"id":1709,"title":"Pokemon:
+        Mewtwo! Ware wa Koko ni Ari","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/7\/87922.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/7\/87922l.jpg"}}}],"paging":{"next":"https:\/\/api.myanimelist.net\/v2\/anime?offset=10&q=two&limit=10"}}'
+  recorded_at: Wed, 29 Dec 2021 22:08:07 GMT
 recorded_with: VCR 6.0.0
