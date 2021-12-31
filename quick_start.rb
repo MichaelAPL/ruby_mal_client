@@ -22,8 +22,7 @@ puts "Anime list:"
 p mal_client.get_anime_list
 
 puts "Anime details:"
-anime_detail_fields = RubyMalClient::Configurations.anime_details_fields
-p mal_client.get_anime_details("30230", anime_detail_fields)
+p mal_client.get_anime_details("30230")
 
 puts "Anime Ranking:"
 p mal_client.get_anime_ranking
