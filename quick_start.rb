@@ -16,34 +16,33 @@ mal_client.authorize(auth_code)
 puts "Welcome #{mal_client.user[:name]}"
 
 puts "Your user information"
-puts mal_client.user
+p mal_client.user
 
 puts "Anime list:"
-#puts mal_client.get_anime_list("michael_apl")
-puts mal_client.get_anime_list
+p mal_client.get_anime_list
 
 puts "Anime details:"
 anime_detail_fields = RubyMalClient::Configurations.anime_details_fields
-puts mal_client.get_anime_details("30230", anime_detail_fields)
+p mal_client.get_anime_details("30230", anime_detail_fields)
 
 puts "Anime Ranking:"
-puts mal_client.get_anime_ranking
+p mal_client.get_anime_ranking
 
 puts "Seasonal anime:"
-puts mal_client.get_seasonal_anime
+p mal_client.get_seasonal_anime
 
 puts "Adding entry to your list"
-random_anime_id = "6347"
+random_anime_id = "6347" #Baka to test
 random_anime_info = {
     status: RubyMalClient::Configurations::ANIME_LIST_ITEM_STATUSES[:watching],
     num_watched_episodes: 1,
     comments: "this record was added using RubyMALClient"
 }
-puts mal_client.add_anime_to_list(random_anime_id, random_anime_info)
+p mal_client.add_or_update_anime_to_list(random_anime_id, random_anime_info)
 
 puts "Deleting entry from your list"
-puts mal_client.delete_anime_from_list(random_anime_id)
+p mal_client.delete_anime_from_list(random_anime_id)
 
 puts "Other user\'s anime list"
-puts mal_client.get_anime_list(username: "SentenceBox")
+p mal_client.get_anime_list(username: "SentenceBox")
 

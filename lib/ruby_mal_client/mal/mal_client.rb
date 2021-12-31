@@ -21,14 +21,22 @@ module RubyMalClient
         end
 
         def get_user_info 
+            raise RubyMalClient::AccessTokenNotFoundError if @headers.empty?
             @user = @http.get(RubyMalClient::Configurations::GET_AUTH_USER_INFO_PATH, @headers)
         end
+
+        def get_suggested_anime(params = {})
+            raise RubyMalClient::AccessTokenNotFoundError if @headers.empty?
+            @http.get(RubyMalClient::Configurations::GET_ANIME_SUGGESTIONS_PATH, params)
+        end 
         
-        def add_anime_to_list(anime_id, anime_info)
-            @http.patch(RubyMalClient::Configurations.my_list_status_path(anime_id), @headers, anime_info)            
+        def add_or_update_anime_to_list(anime_id, anime_details)
+            raise RubyMalClient::AccessTokenNotFoundError if @headers.empty?
+            @http.patch(RubyMalClient::Configurations.my_list_status_path(anime_id), @headers, anime_details)            
         end
 
         def delete_anime_from_list(anime_id)
+            raise RubyMalClient::AccessTokenNotFoundError if @headers.empty?
             @http.delete(RubyMalClient::Configurations.my_list_status_path(anime_id), @headers) 
         end
 

@@ -25,6 +25,7 @@ module RubyMalClient
         end
 
         def refresh_access_token
+            raise RubyMalClient::AccessTokenNotFoundError if @access_token == nil
             headers = urlencoded_header
             data = data_body("refresh_token")
             response = @http.post(RubyMalClient::Configurations::GET_ACCESS_TOKEN_PATH, headers, data, data)

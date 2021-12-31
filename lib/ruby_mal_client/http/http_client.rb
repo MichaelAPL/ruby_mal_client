@@ -63,8 +63,8 @@ module RubyMalClient
         private
         
         def request_response(request_type, request_data)
-            path = path_with_params(path, request_data[:params]) if request_data[:params].size > 0
-            uri = URI.join(@base_url, request_data[:path])
+            path = path_with_params(request_data[:path], request_data[:params]) if request_data[:params].size > 0
+            uri = URI.join(@base_url, path != nil ? path : request_data[:path])
             request = request_type.new(uri, request_data[:headers])
             request.set_form_data(request_data[:data]) if request_data[:data] != nil
             handle(request)
