@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "ruby_mal_client"
 
 MAL_CLIENT_ID = "ab75fe72617c2d1ab411e46bb31c144f"
@@ -31,11 +33,11 @@ puts "Seasonal anime:"
 p mal_client.get_seasonal_anime
 
 puts "Adding entry to your list"
-random_anime_id = "6347" #Baka to test
+random_anime_id = "6347" # Baka to test
 random_anime_info = {
-    status: RubyMalClient::Configurations::ANIME_LIST_ITEM_STATUSES[:watching],
-    num_watched_episodes: 1,
-    comments: "this record was added using RubyMALClient"
+  status: RubyMalClient::Configurations::ANIME_LIST_ITEM_STATUSES[:watching],
+  num_watched_episodes: 1,
+  comments: "this record was added using RubyMALClient"
 }
 p mal_client.add_or_update_anime_to_list(random_anime_id, random_anime_info)
 
@@ -44,4 +46,3 @@ p mal_client.delete_anime_from_list(random_anime_id)
 
 puts "Other user\'s anime list"
 p mal_client.get_anime_list(username: "SentenceBox")
-
