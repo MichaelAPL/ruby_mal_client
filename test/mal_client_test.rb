@@ -20,8 +20,6 @@ class MALClientTest < Minitest::Test
     assert !mal_client.headers.empty?
   end
 
-  def test_get_user_info_returns_a_valid_hash; end
-
   def test_suggested_anime_returns_a_valid_hash
     mal_client = init_mal_client
     VCR.use_cassette("mal_client_authorize", match_requests_on: [:host], record: :new_episodes) do
