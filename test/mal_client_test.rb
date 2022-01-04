@@ -2,13 +2,12 @@
 
 require "test_helper"
 require "vcr"
-require_relative "../lib/ruby_mal_client/mal/mal_client"
 
 class MALClientTest < Minitest::Test
   def test_access_token_is_required_for_retrieving_data
     assert_raises(RubyMalClient::AccessTokenNotFoundError) do
       mal_client = init_mal_client
-      mal_client.get_user_info
+      mal_client.user_info
     end
   end
 
@@ -26,8 +25,8 @@ class MALClientTest < Minitest::Test
       authorize_mal_client(mal_client)
     end
 
-    VCR.use_cassette("get_suggested_anime") do
-      suggested_animes = mal_client.get_suggested_anime
+    VCR.use_cassette("suggested_anime") do
+      suggested_animes = mal_client.suggested_anime
       assert suggested_animes[:data].first.key?(:node)
     end
   end
@@ -35,8 +34,8 @@ class MALClientTest < Minitest::Test
   private
 
   def init_mal_client
-    RubyMalClient.configurations.client_id = "ab75fe72617c2d1ab411e46bb31c144f"
-    RubyMalClient.configurations.client_secret = "38b7e9b0a3398486f06f201904fa3622c7f19f66809fc98b1d2c8e362c3276da"
+    RubyMalClient.configuration.client_id = "ab75fe72617c2d1ab411e46bb31c144f"
+    RubyMalClient.configuration.client_secret = "38b7e9b0a3398486f06f201904fa3622c7f19f66809fc98b1d2c8e362c3276da"
     RubyMalClient::MALClient.new
   end
 

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "test_helper"
-require_relative "../lib/ruby_mal_client/http/http_client"
 
 class HttpClientTest < Minitest::Test
   def test_http_client_must_exists
