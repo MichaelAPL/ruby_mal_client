@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.myanimelist.net/v2/users/@me/animelist
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE0MzRkZTRmZDU5MTk0Nzk3YjhhOGY4NmVkMTZiZTc2MjdjMmZjOGY4OGQ0MzcwZWQ5ODFlZDk2MjEwNDNmYjc5YzdhZTYxMzJkMWRjY2M5In0.eyJhdWQiOiJhYjc1ZmU3MjYxN2MyZDFhYjQxMWU0NmJiMzFjMTQ0ZiIsImp0aSI6ImE0MzRkZTRmZDU5MTk0Nzk3YjhhOGY4NmVkMTZiZTc2MjdjMmZjOGY4OGQ0MzcwZWQ5ODFlZDk2MjEwNDNmYjc5YzdhZTYxMzJkMWRjY2M5IiwiaWF0IjoxNjQwODMwMzc1LCJuYmYiOjE2NDA4MzAzNzUsImV4cCI6MTY0MzUwODc3NSwic3ViIjoiMjYyMTU1NyIsInNjb3BlcyI6W119.GK0TP3k4fd_r73xiwWspBFHhsxKFyL1kI_VWDRzMDWks0_jGqLk7kkfnrs7aHBEPPi4NE8aqVQfHV1gwT0TGeuR3pD2ylbrbhweaUcAzut36g98SJ32WsMkky07RYqigbU6Z8nItCiHwKXpoRCVUyocYqjCNRA5Xs_01GAI3PuzamrkdWi5agQRy-bPIWmC4pvJCaMyC_7RFO1DfhTFCQQAD75BlB1V7JhGJ2GqifCCiUOc735vjLFOKaq2Bh6wob3B84vWQIhze0sGo-Z3ZL6Gi0g8J9kh0dn7rvqPrwWABH4Sk9-Cg1Faz-BXx0dpBjwc7qgEpH8NDbzVSS-pjuw
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.myanimelist.net
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 19 Jan 2022 10:37:21 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache
+      Www-Authenticate:
+      - Bearer error="invalid_token"
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Robots-Tag:
+      - noindex,nofollow
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 b8f71580e59bb4f96fb65eb28c9ff930.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - QRO50-C1
+      X-Amz-Cf-Id:
+      - cTCsrRmb6y56J7TWc1lLT5KmkIXhJvFlfF3sG4l7Kwr2t4nFu1VZww==
+    body:
+      encoding: UTF-8
+      string: '{"error":"invalid_request","message":"The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed.","hint":"Authorization code has expired"}'
+  recorded_at: Wed, 19 Jan 2022 10:37:21 GMT
+recorded_with: VCR 6.0.0
