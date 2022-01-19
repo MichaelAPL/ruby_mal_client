@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.myanimelist.net/v2/anime/season/2021/fall
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Mal-Client-Id:
+      - ab75fe72617c2d1ab411e46bb31c144f
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Host:
+      - api.myanimelist.net
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 19 Jan 2022 04:05:13 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Robots-Tag:
+      - noindex,nofollow
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 d9e6e5fbce5eba1297db3dd3ea30c382.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - QRO50-C1
+      X-Amz-Cf-Id:
+      - yPsmVnVKxcVsSUTJnrxZnRA0TRcV90DwHP1uz05baxZmeyYocIlZPA==
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"node":{"id":49701,"title":"Doupo Cangqiong: San Nian Zhi
+        Yue","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1029\/118861.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1029\/118861l.jpg"}}},{"node":{"id":40834,"title":"Ousama
+        Ranking","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1347\/117616.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1347\/117616l.jpg"}}},{"node":{"id":21,"title":"One
+        Piece","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/6\/73245.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/6\/73245l.jpg"}}},{"node":{"id":45576,"title":"Mushoku
+        Tensei: Isekai Ittara Honki Dasu Part 2","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1028\/117777.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1028\/117777l.jpg"}}},{"node":{"id":50364,"title":"Douluo
+        Dalu: Xiaowu Fuhuo","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1824\/119398.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1824\/119398l.jpg"}}},{"node":{"id":49847,"title":"Meng
+        Qi Shi Shen 2nd Season","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1084\/117772.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1084\/117772l.jpg"}}},{"node":{"id":50325,"title":"Kaguya-sama
+        wa Kokurasetai: Ultra Romantic Teaser PV - Ishigami Yuu wa Kataritai","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1265\/119435.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1265\/119435l.jpg"}}},{"node":{"id":50098,"title":"Kyoukaisen","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1698\/118740.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1698\/118740l.jpg"}}},{"node":{"id":49738,"title":"Heike
+        Monogatari","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1282\/119979.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1282\/119979l.jpg"}}},{"node":{"id":966,"title":"Crayon
+        Shin-chan","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/10\/59897.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/10\/59897l.jpg"}}}],"paging":{"next":"https:\/\/api.myanimelist.net\/v2\/anime\/season\/2021\/fall?offset=10"},"season":{"year":2021,"season":"fall"}}'
+  recorded_at: Wed, 19 Jan 2022 04:05:13 GMT
+recorded_with: VCR 6.0.0

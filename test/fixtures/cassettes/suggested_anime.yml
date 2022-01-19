@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.myanimelist.net/v2/anime/suggestions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.myanimelist.net
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 19 Jan 2022 07:35:16 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Robots-Tag:
+      - noindex,nofollow
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 90cc030a23062f7d0c2c522a2f525588.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - QRO50-C1
+      X-Amz-Cf-Id:
+      - Fvy-WJptdK7dHRu4qsRQ5v8d8tGkdDqumL2JQJ7txqH62XIceyW7kg==
+    body:
+      encoding: UTF-8
+      string: '{"message":"","error":"forbidden"}'
+  recorded_at: Wed, 19 Jan 2022 07:35:16 GMT
+recorded_with: VCR 6.0.0

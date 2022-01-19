@@ -48,6 +48,80 @@ http_interactions:
       - eOKmBL1WnJ3AHGKVrbhNJNflnePa6edaJd3uIxCnN8XdJkNdFHj2Ow==
     body:
       encoding: UTF-8
-      string: '{"data":[{"node":{"id":597,"title":"Neko no Ongaeshi","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1\/597.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1\/597l.jpg"}}},{"node":{"id":34914,"title":"New Game!!","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/86790.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/86790l.jpg"}}},{"node":{"id":1961,"title":"Arashi no Yoru ni","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/5064.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/5064l.jpg"}}},{"node":{"id":488,"title":"Ichigo Mashimaro","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/10\/11042.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/10\/11042l.jpg"}}},{"node":{"id":37985,"title":"Aggressive Retsuko (ONA) 2nd Season","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1739\/101117.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1739\/101117l.jpg"}}},{"node":{"id":7592,"title":"Nurarihyon no Mago","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/75631.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/75631l.jpg"}}},{"node":{"id":25303,"title":"Haikyuu!!: Lev Genzan!","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1498\/96643.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1498\/96643l.jpg"}}},{"node":{"id":6591,"title":"Rurouni Kenshin DVD-BOX Special Ending","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/25808.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/25808l.jpg"}}},{"node":{"id":1824,"title":"Hadashi no Gen","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1873\/98756.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1873\/98756l.jpg"}}},{"node":{"id":40082,"title":"Lupin III: The First","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1572\/108506.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1572\/108506l.jpg"}}}],"paging":{"next":"https:\/\/api.myanimelist.net\/v2\/anime\/suggestions?offset=10"}}'
+      string: '{"data":[{"node":{"id":597,"title":"Neko no Ongaeshi","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1\/597.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1\/597l.jpg"}}},{"node":{"id":34914,"title":"New
+        Game!!","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/86790.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/86790l.jpg"}}},{"node":{"id":1961,"title":"Arashi
+        no Yoru ni","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/5064.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/5064l.jpg"}}},{"node":{"id":488,"title":"Ichigo
+        Mashimaro","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/10\/11042.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/10\/11042l.jpg"}}},{"node":{"id":37985,"title":"Aggressive
+        Retsuko (ONA) 2nd Season","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1739\/101117.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1739\/101117l.jpg"}}},{"node":{"id":7592,"title":"Nurarihyon
+        no Mago","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/75631.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/9\/75631l.jpg"}}},{"node":{"id":25303,"title":"Haikyuu!!:
+        Lev Genzan!","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1498\/96643.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1498\/96643l.jpg"}}},{"node":{"id":6591,"title":"Rurouni
+        Kenshin DVD-BOX Special Ending","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/25808.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/4\/25808l.jpg"}}},{"node":{"id":1824,"title":"Hadashi
+        no Gen","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1873\/98756.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1873\/98756l.jpg"}}},{"node":{"id":40082,"title":"Lupin
+        III: The First","main_picture":{"medium":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1572\/108506.jpg","large":"https:\/\/api-cdn.myanimelist.net\/images\/anime\/1572\/108506l.jpg"}}}],"paging":{"next":"https:\/\/api.myanimelist.net\/v2\/anime\/suggestions?offset=10"}}'
   recorded_at: Fri, 31 Dec 2021 19:05:22 GMT
+- request:
+    method: post
+    uri: https://myanimelist.net/v1/oauth2/token?client_id=ab75fe72617c2d1ab411e46bb31c144f&client_secret=38b7e9b0a3398486f06f201904fa3622c7f19f66809fc98b1d2c8e362c3276da&code=def502003f48abfd472bdf9874f09da4194ae3cbe51eeb2e63f3a995929d53b92c73ac99e3453dbcee5ac04e23cf709d6c3a33aa0fa4203dc862cb81128e247be9e038b5f904a1312af5f42c6e42208fe2f61571df4c2c8b938ea68513693f4f79092e044c783087f32292e8932686359fb1d0d9b2c9602e0fde103da60ef7c3d06e28d1c5978e9945414ee42ec1c966763b19bfd287ec7e10875f8e8bdb6fa703fad0e8f8f1c1fd82f3e70136d6a1bccea604d8bb007c0685c946d0c1fd3862a57d13a908290412d24b0201fc2af67eb3fc38febc8bce096cd38fbb2ae6cae24014f46efb9841ded1ccb0968f86883fac23a6b54c1429ca49d9d5588f21c1032a706baf4f7f988f0d10b9be5be08c2d4a44705f938627cb3dbcde712a81352fd70b8e400258f017702b2fbd6f07ea816648865474845e6ce407015fcbc16bacb94f24fa7b8ccbdb914c28c2cfa1c6b84e7f028c910136cbd3e338de341cd761dd6e6d8c968186b492ab88f0768d6a7640b1797ba3aaafc842c2653c9970897cdac2c19ca6e7e11bff0c1f6b330dac46eff23d6e013f4ce5bc616115ee3d9505a0d2c22e326f62e589bbc7c32402c86d21f016844b3d066f37953d9a750ba8dd157c97077408e0eaecde6042de&code_verifier=qTKy0K1RjK5xb1CSAw3DZkzcWL9m13ynArzrC8IMrLJ3hHyOC51mt21ckoVYz8MX1DzYAiEcx7YsyV7IQJEn7dV6blLXjj3fKhto
+    body:
+      encoding: US-ASCII
+      string: client_id=ab75fe72617c2d1ab411e46bb31c144f&client_secret=38b7e9b0a3398486f06f201904fa3622c7f19f66809fc98b1d2c8e362c3276da&code=def502003f48abfd472bdf9874f09da4194ae3cbe51eeb2e63f3a995929d53b92c73ac99e3453dbcee5ac04e23cf709d6c3a33aa0fa4203dc862cb81128e247be9e038b5f904a1312af5f42c6e42208fe2f61571df4c2c8b938ea68513693f4f79092e044c783087f32292e8932686359fb1d0d9b2c9602e0fde103da60ef7c3d06e28d1c5978e9945414ee42ec1c966763b19bfd287ec7e10875f8e8bdb6fa703fad0e8f8f1c1fd82f3e70136d6a1bccea604d8bb007c0685c946d0c1fd3862a57d13a908290412d24b0201fc2af67eb3fc38febc8bce096cd38fbb2ae6cae24014f46efb9841ded1ccb0968f86883fac23a6b54c1429ca49d9d5588f21c1032a706baf4f7f988f0d10b9be5be08c2d4a44705f938627cb3dbcde712a81352fd70b8e400258f017702b2fbd6f07ea816648865474845e6ce407015fcbc16bacb94f24fa7b8ccbdb914c28c2cfa1c6b84e7f028c910136cbd3e338de341cd761dd6e6d8c968186b492ab88f0768d6a7640b1797ba3aaafc842c2653c9970897cdac2c19ca6e7e11bff0c1f6b330dac46eff23d6e013f4ce5bc616115ee3d9505a0d2c22e326f62e589bbc7c32402c86d21f016844b3d066f37953d9a750ba8dd157c97077408e0eaecde6042de&code_verifier=qTKy0K1RjK5xb1CSAw3DZkzcWL9m13ynArzrC8IMrLJ3hHyOC51mt21ckoVYz8MX1DzYAiEcx7YsyV7IQJEn7dV6blLXjj3fKhto
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - myanimelist.net
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 19 Jan 2022 04:29:48 GMT
+      Server:
+      - Apache
+      Set-Cookie:
+      - MALHLOGSESSID=1ed53eeb5cffc30b3da296cdb13bf834; expires=Mon, 18-Jan-2027 04:29:48
+        GMT; Max-Age=157680000; path=/
+      - MALSESSIONID=uanpr0mj91s85004m39o9g2tc2; expires=Sat, 17-Jan-2032 04:29:48
+        GMT; Max-Age=315360000; path=/; secure; HttpOnly
+      Cache-Control:
+      - no-cache, private
+      Pragma:
+      - no-cache
+      Referrer-Policy:
+      - same-origin
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 dae7f5fab9a3c93e40b944921ca6383a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - QRO50-C1
+      X-Amz-Cf-Id:
+      - pG0QtsbrIC5wg0konsLqH3XXiI8RWPEtrpfW9xCZ5IlypGZcBMAFxw==
+    body:
+      encoding: UTF-8
+      string: '{"error":"unsupported_grant_type","message":"The authorization grant
+        type is not supported by the authorization server.","hint":"Check the `grant_type`
+        parameter"}'
+  recorded_at: Wed, 19 Jan 2022 04:29:48 GMT
 recorded_with: VCR 6.0.0
