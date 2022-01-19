@@ -15,6 +15,10 @@ module RubyMalClient
       @access_token = auth.generate_access_token(auth_code)
     end
 
+    def renovate_authorization!
+      @access_token = auth.refresh_access_token
+    end
+
     def my_anime_list(params: {})
       authorized!
       @http.get("users/@me/animelist", headers, params)

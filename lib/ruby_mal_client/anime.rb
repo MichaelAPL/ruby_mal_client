@@ -27,13 +27,16 @@ module RubyMalClient
     def seasonal(year: nil, season: nil)
       authorized!
 
-      a_year = year.nil? ? Date.today.year : year.to_i.to_s
-      raise RubyMalClient::InvalidYearError if a_year.to_i > Date.today.year || a_year.to_i < 1917
+      year = year.nil? ? Date.today.year : year.to_i.to_s
+      raise ArgumentError.new "Invalid year" if year.to_i > Date.today.year || year.to_i < 1917 #oldest anime registered on MAL is from 1917
 
-      a_season = season.nil? ? current_season(Date::MONTHNAMES[Date.today.month]) : season.to_s
-      raise RubyMalClient::InvalidSeasonError unless RubyMalClient::Configuration::SEASONS_MONTHS.key?(a_season.to_sym)
+      if(season.nil? && year.to_i == Date.today.year)
+        season = current_season(Date::MONTHNAMES[Date.today.month])
+      else
+        validate_season!(season)        
+      end
 
-      @http.get("anime/season/#{a_year}/#{a_season}", headers)
+      @http.get("anime/season/#{year}/#{season}", headers)
     end
 
     protected
@@ -47,6 +50,11 @@ module RubyMalClient
     end
 
     private
+
+    def validate_season!(season)
+      raise ArgumentError.new "Missing season" if season.nil? 
+      raise ArgumentError.new "Invalid season" unless RubyMalClient::Configuration::SEASONS_MONTHS.key?(season.to_sym)
+    end
 
     def authorized!
       raise RubyMalClient::MissingCredentialsError if RubyMalClient.configuration.client_id.nil?

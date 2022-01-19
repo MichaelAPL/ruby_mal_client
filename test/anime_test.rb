@@ -68,14 +68,14 @@ class AnimeTest < Minitest::Test
 
   def test_seasonal_anime_validates_year
     anime = init_anime
-    assert_raises(RubyMalClient::InvalidYearError) do
+    assert_raises(ArgumentError) do
       anime.seasonal(year: 3000)
     end
   end
 
   def test_seasonal_anime_validates_season
     anime = init_anime
-    assert_raises(RubyMalClient::InvalidSeasonError) do
+    assert_raises(ArgumentError) do
       anime.seasonal(season: "winterfell")
     end
   end

@@ -27,6 +27,19 @@ class AuthenticatedUserTest < Minitest::Test
     end
   end
 
+  def test_expired_token_error_is_raised_when_access_token_expires
+    assert_raises(RubyMalClient::ExpiredTokenError) do
+      user = init_user
+      VCR.use_cassette("user_authentication", match_requests_on: [:host], record: :new_episodes) do
+        authenticate_user(user)
+      end
+
+      VCR.use_cassette("expired_token_error", match_requests_on: [:host]) do
+        user.my_anime_list
+      end
+    end
+  end
+
   private
 
   def init_user

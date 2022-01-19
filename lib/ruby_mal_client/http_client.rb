@@ -77,12 +77,15 @@ module RubyMalClient
       case http_response
       when Net::HTTPSuccess
         JSON.parse(http_response.body, symbolize_names: true)
+      when Net::HTTPBadRequest
+        raise RubyMalClient::ExpiredTokenError if http_response.body.match?(/Authorization code has expired/)
+        raise ServerError, "Error code: [#{http_response.code}]. Type: #{http_response.class}"
       when Net::HTTPClientError
-        raise ClientError, "Error code: [#{http_response.code}]. Message: #{http_response.class}"
+        raise ClientError, "Error code: [#{http_response.code}]. Type: #{http_response.class}"
       when Net::HTTPServerError
-        raise ServerError, "Error code: [#{http_response.code}]. Message: #{http_response.class}"
+        raise ServerError, "Error code: [#{http_response.code}]. Type: #{http_response.class}"
       when Net::HTTPNotFound
-        raise ServerError, "Error code: [#{http_response.code}]. Message: #{http_response.class}"
+        raise ServerError, "Error code: [#{http_response.code}]. Type: #{http_response.class}"      
       end
     end
 
