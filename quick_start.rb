@@ -13,9 +13,9 @@ anime = RubyMalClient::Anime.new
 puts "Please grant access to your profile by using the following url: #{user.authorization_url}"
 puts "Once you have granted access please paste your access code here:"
 auth_code = gets.chomp.to_s
-user.authorize(auth_code)
+user.authorize!(auth_code)
 
-puts "Welcome #{user.user[:name]}"
+puts "Welcome #{user.current_user[:name]}"
 
 puts "Your user information"
 p user.current_user
@@ -35,7 +35,7 @@ p anime.seasonal
 puts "Adding entry to your list"
 random_anime_id = "6347" # Baka to test
 random_anime_info = {
-  status: RubyMalClient::Configurations::ANIME_LIST_ITEM_STATUSES[:watching],
+  status: RubyMalClient::Configuration::ANIME_LIST_ITEM_STATUSES[:watching],
   num_watched_episodes: 1,
   comments: "this record was added using RubyMALClient"
 }

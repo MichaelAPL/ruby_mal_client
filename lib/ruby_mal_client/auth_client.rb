@@ -44,17 +44,13 @@ module RubyMalClient
     end
 
     def authorization_data(auth_code)
-      if auth_code.nil?
-        raise(ArgumentError, "Auth Code is missing, generate it by using the following URL - #{auth_url}")
-      end
-
-      default_data.merge({ code: auth_code, code_verifier: code_verifier })
+      raise(ArgumentError, "Auth Code is missing, generate it by using the following URL - #{auth_url}") if auth_code.nil?
+      default_data.merge({code: auth_code, code_verifier: code_verifier, grant_type: "authorization_code"})
     end
 
     def refresh_token_data
       raise(ArgumentError, "Access token is nil") if access_token.nil?
-
-      default_data.merge(refresh_token: refresh_token)
+      default_data.merge({refresh_token: refresh_token, grant_type: "refresh_token"})
     end
 
     def default_data

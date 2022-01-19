@@ -22,7 +22,7 @@ module RubyMalClient
 
     def current_user
       authorized!
-      @current_user ||= @http.get("users/@me", @headers)
+      @current_user ||= @http.get("users/@me", headers)
     end
 
     def suggested_anime(params = {})
@@ -42,18 +42,18 @@ module RubyMalClient
 
     private
 
+    attr_reader :auth, :access_token
+
     def headers
       @headers ||= { "Authorization" => "Bearer #{access_token}" }
     end
 
-    def authorized?
-      !access_token.nil?
-    end
-
-    attr_reader :auth, :access_token
-
     def authorized!
       raise RubyMalClient::AccessTokenNotFoundError unless authorized?
     end
+
+    def authorized?
+      !access_token.nil?
+    end        
   end
 end
