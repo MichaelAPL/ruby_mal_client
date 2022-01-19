@@ -17,48 +17,43 @@ module RubyMalClient
 
     def my_anime_list(params: {})
       authorized!
-
       @http.get("users/@me/animelist", headers, params)
     end
 
     def current_user
       authorized!
-
       @current_user ||= @http.get("users/@me", @headers)
     end
 
     def suggested_anime(params = {})
       authorized!
-
-      @http.get("#{ANIME_PATH}/suggestions", params)
+      @http.get("anime/suggestions", params)
     end
 
     def upsert_anime_to_list(anime_id, anime_details)
       authorized!
-
       @http.patch("anime/#{anime_id}/my_list_status", headers, anime_details)
     end
 
     def delete_anime_from_list(anime_id)
       authorized!
-
       @http.delete("anime/#{anime_id}/my_list_status", headers)
     end
 
     private
 
-    attr_reader :auth, :access_token
-
     def headers
       @headers ||= { "Authorization" => "Bearer #{access_token}" }
     end
 
-    def authorized!
-      raise RubyMalClient::AccessTokenNotFoundError unless authorized?
+    def authorized?
+      !access_token.nil?
     end
 
-    def authorized?
-      access_token.nil? || access_token.empty?
+    attr_reader :auth, :access_token
+
+    def authorized!
+      raise RubyMalClient::AccessTokenNotFoundError unless authorized?
     end
   end
 end

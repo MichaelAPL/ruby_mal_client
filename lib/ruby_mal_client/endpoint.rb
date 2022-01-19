@@ -17,9 +17,5 @@ module RubyMalClient
     def headers
       @headers ||= {}
     end
-
-    def authorized!
-      raise NotImplementedError
-    end
   end
 end

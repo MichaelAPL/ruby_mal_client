@@ -10,7 +10,7 @@ module RubyMalClient
     attr_accessor :auth_code
 
     def initialize
-      raise MissingCredentialsError if RubyMalClient.configuration.credentials?
+      raise MissingCredentialsError unless RubyMalClient.configuration.credentials?
 
       @auth_code = nil
       @access_token = nil
@@ -29,7 +29,6 @@ module RubyMalClient
 
     def refresh_access_token
       data = refresh_token_data
-
       response = @http.post("token", default_headers, data, data)
       @access_token = response[:access_token]
     end
@@ -49,10 +48,7 @@ module RubyMalClient
         raise(ArgumentError, "Auth Code is missing, generate it by using the following URL - #{auth_url}")
       end
 
-      default_data.merge({
-                           code: auth_code,
-                           code_verifier: code_verifier
-                         })
+      default_data.merge({ code: auth_code, code_verifier: code_verifier })
     end
 
     def refresh_token_data
