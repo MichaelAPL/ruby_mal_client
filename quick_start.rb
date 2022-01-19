@@ -3,8 +3,8 @@
 require "ruby_mal_client"
 
 RubyMalClient.configure do |config|
-  config.client_id = "ab75fe72617c2d1ab411e46bb31c144f"
-  config.client_secret = "38b7e9b0a3398486f06f201904fa3622c7f19f66809fc98b1d2c8e362c3276da"
+  config.client_id = "Your Client ID goes here..."
+  config.client_secret = "Your Client Secret goes here..."
 end
 
 user = RubyMalClient::AuthenticatedUser.new
@@ -33,7 +33,8 @@ puts "Seasonal anime:"
 p anime.seasonal
 
 puts "Adding entry to your list"
-random_anime_id = "6347" # Baka to test
+# The following anime id corresponds to "Baka to test", if you already have it registered in your list, be careful with the following methods
+random_anime_id = "6347" #baka to test
 random_anime_info = {
   status: RubyMalClient::Configuration::ANIME_LIST_ITEM_STATUSES[:watching],
   num_watched_episodes: 1,
