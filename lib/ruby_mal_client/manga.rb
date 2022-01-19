@@ -20,6 +20,16 @@ module RubyMalClient
       @http.get("manga/ranking", headers, params)
     end
 
+    protected
+
+    def headers
+      @headers ||= {
+        "X-MAL-CLIENT-ID" => RubyMalClient.configuration.client_id,
+        "Content-Type" => "application/json",
+        "Accept" => "application/json"
+      }
+    end
+
     private
 
     def authorized!

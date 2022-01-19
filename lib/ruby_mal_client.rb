@@ -7,6 +7,8 @@ require_relative "ruby_mal_client/http_client"
 require_relative "ruby_mal_client/auth_client"
 require_relative "ruby_mal_client/endpoint"
 require_relative "ruby_mal_client/anime"
+require_relative "ruby_mal_client/manga"
+require_relative "ruby_mal_client/forum"
 require_relative "ruby_mal_client/authenticated_user"
 
 module RubyMalClient

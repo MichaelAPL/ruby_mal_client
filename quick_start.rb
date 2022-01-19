@@ -19,7 +19,6 @@ user.authorize!(auth_code)
 
 puts "Welcome #{user.current_user[:name]}"
 
-=begin
 puts "Your user information"
 p user.current_user
 
@@ -50,7 +49,7 @@ p user.delete_anime_from_list(random_anime_id)
 
 puts "Other user\'s anime list"
 p anime.list_for("SentenceBox")
-=end
+
 p "Other user\'s manga list"
 p manga.list_for("SentenceBox")
 
@@ -64,7 +63,7 @@ p "Your manga list"
 p user.my_manga_list
 
 p "Adding record to your manga list"
-random_manga_id = "39419" #Lovely complex
+random_manga_id = "39419" #Lovely Complex Two
 random_manga_info = {
   status: "reading",
   num_chapters_read: 1,
@@ -72,7 +71,8 @@ random_manga_info = {
 }
 p user.upsert_manga_to_list(random_manga_id, random_manga_info)
 
-#p "Deleting record from your manga list"
+p "Deleting record from your manga list"
+p user.delete_manga_from_list(random_manga_id)
 
 p "Forum boards"
 p forum.boards

@@ -41,12 +41,13 @@ RubyMalClient.configure do |config|
 end
 ```
 
-If you only want to access to anime without modifying anime lists you can just set the Client ID in the configurations and you should be able to use the `Anime` class
+If you only want to access to anime, manga, lists and forums without modifying lists you can just set the Client ID into the configurations and you should be able to use the `Anime`, `Manga` and `Forums` classes.
 
 ## Anime 
 
 | Method name      | Function |
 | -----------      | ----------- |
+| all              | Brings back all the posible amount of records (see the params fields for more info at the api doc)      |
 | list_for         | Brings back the anime list of the specified user      |
 | find             | Brings the details of the specified anime by passing the anime_id        |
 | ranking          | Brings back the anime ranking      |
@@ -96,7 +97,13 @@ auth_code = "def50200c0687cfa2678e250..." #auth code goes here
 user.authorize!(auth_code)
 ```
 
-Now you can access the methods provided by the `AuthenticatedUser` class
+MAL API's access token has an expiration time, when the access token expires, an exception will be throwed, in that case, just use the `renovate_authorization!` method.
+
+```ruby
+user.renovate_authorization!
+```
+
+Now you can access the methods provided by the `AuthenticatedUser` class for retrieving info:
 
 | Method name              | Function |
 | -----------              | ----------- |
@@ -105,6 +112,8 @@ Now you can access the methods provided by the `AuthenticatedUser` class
 | suggested_anime          | Brings the suggested anime section for the authenticated user      |
 | upsert_anime_to_list     | add or update an anime to the authenticated user's anime list      |
 | delete_anime_from_list   | delete an anime from the authenticated user's anime list      |
+
+<!---| full_list            | Brings either the anime or manga FULL list of the authenticated user without pagination     |-->
 
 Example of use:
 
@@ -128,6 +137,31 @@ user.upsert_anime_to_list(random_anime_id, random_anime_info)
 #Deleting entry from your list
 user.delete_anime_from_list(random_anime_id)
 ```
+
+## Manga
+
+```ruby
+manga = RubyMalClient::Manga.new
+```
+
+| Method name      | Function |
+| -----------      | ----------- |
+| all              | Brings back all the posible amount of records (see the params fields for more info at the api doc)      |
+| list_for         | Brings back the manga list of the specified user      |
+| find             | Brings the details an specified manga by passing the manga_id        |
+| ranking          | Brings back the MAL manga ranking (see the api doc for applying filters with the params)     |
+
+## Forum
+
+```ruby
+forum = RubyMalClient::Forum.new
+```
+
+| Method name   | Notes |
+| -----------   | ----------- |
+| boards        |       |
+| topics        | I implemented so it requires a board_id, otherwise it takes so long trying to retrieve all topics that it may cause a timeout      |
+| topic_details |  |
 
 ## Quickstart
 You can check and run the `quickstart.rb` file for a sumarized and complete use of the gem classes and flow
