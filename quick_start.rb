@@ -9,6 +9,8 @@ end
 
 user = RubyMalClient::AuthenticatedUser.new
 anime = RubyMalClient::Anime.new
+manga = RubyMalClient::Manga.new
+forum = RubyMalClient::Forum.new
 
 puts "Please grant access to your profile by using the following url: #{user.authorization_url}"
 puts "Once you have granted access please paste your access code here:"
@@ -17,6 +19,7 @@ user.authorize!(auth_code)
 
 puts "Welcome #{user.current_user[:name]}"
 
+=begin
 puts "Your user information"
 p user.current_user
 
@@ -36,7 +39,7 @@ puts "Adding entry to your list"
 # The following anime id corresponds to "Baka to test", if you already have it registered in your list, be careful with the following methods
 random_anime_id = "6347" #baka to test
 random_anime_info = {
-  status: RubyMalClient::Configuration::ANIME_LIST_ITEM_STATUSES[:watching],
+  status: "watching",
   num_watched_episodes: 1,
   comments: "this record was added using RubyMALClient"
 }
@@ -47,3 +50,35 @@ p user.delete_anime_from_list(random_anime_id)
 
 puts "Other user\'s anime list"
 p anime.list_for("SentenceBox")
+=end
+p "Other user\'s manga list"
+p manga.list_for("SentenceBox")
+
+p "Manga ranking"
+p manga.ranking
+
+p "Manga details"
+p manga.find("39419")
+
+p "Your manga list"
+p user.my_manga_list
+
+p "Adding record to your manga list"
+random_manga_id = "39419" #Lovely complex
+random_manga_info = {
+  status: "reading",
+  num_chapters_read: 1,
+  comments: "this record was added using RubyMALClient"
+}
+p user.upsert_manga_to_list(random_manga_id, random_manga_info)
+
+#p "Deleting record from your manga list"
+
+p "Forum boards"
+p forum.boards
+
+p "Forum topics"
+p forum.topics("5")
+
+p "Forum topic details"
+p forum.topic_details("1979258")

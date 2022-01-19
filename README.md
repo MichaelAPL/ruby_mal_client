@@ -72,7 +72,7 @@ anime.seasonal
 ```
 Note that for the `params` you can send them just as they are defined at the official MAL API documentation, you can check it [here](https://myanimelist.net/apiconfig/references/api/v2#section/Common-parameters).
 
-DEVELOPER NOTE: for the `fields` param, there are actually a lot of fields that can be sended, all of them are sent in the find method, as most of these are not (up to this date) specified in the API documentation, I gathered all the fields I was able to find at the `RubyMALClient::Configuration::ANIME_DETAILS_FIELDS`. You can either take them all or modify the params fields with the ones you consider necessary.
+DEVELOPER NOTE: for the `fields` param, there are actually a lot of fields that can be sended, all of them are sent in the find method, as most of these are not (up to this date) specified in the API documentation, I gathered all the fields I was able to find and set them at the `RubyMALClient::Configuration::ANIME_DETAILS_FIELDS`. You can either take them all or modify the params fields with the ones you consider necessary.
 
 ## User Authentication
 

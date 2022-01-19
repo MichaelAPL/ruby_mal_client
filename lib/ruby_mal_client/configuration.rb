@@ -19,14 +19,6 @@ module RubyMalClient
       fall: %w[October November December]
     }.freeze
 
-    ANIME_LIST_ITEM_STATUSES = {
-      watching: "watching",
-      completed: "completed",
-      on_hold: "on_hold",
-      dropped: "dropped",
-      plan_to_watch: "plan_to_watch"
-    }.freeze
-
     attr_accessor :client_id, :client_secret
 
     def self.formatted_anime_details_fields(fields = [])

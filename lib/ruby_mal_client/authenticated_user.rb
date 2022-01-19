@@ -19,14 +19,14 @@ module RubyMalClient
       @access_token = auth.refresh_access_token
     end
 
-    def my_anime_list(params: {})
-      authorized!
-      @http.get("users/@me/animelist", headers, params)
-    end
-
     def current_user
       authorized!
       @current_user ||= @http.get("users/@me", headers)
+    end
+
+    def my_anime_list(params: {})
+      authorized!
+      @http.get("users/@me/animelist", headers, params)
     end
 
     def suggested_anime(params = {})
@@ -42,6 +42,21 @@ module RubyMalClient
     def delete_anime_from_list(anime_id)
       authorized!
       @http.delete("anime/#{anime_id}/my_list_status", headers)
+    end
+
+    def my_manga_list(params: {})
+      authorized!
+      @http.get("users/@me/mangalist", headers, params)
+    end
+
+    def upsert_manga_to_list(manga_id, manga_details)
+      authorized!
+      @http.patch("manga/#{manga_id}/my_list_status", headers, manga_details)
+    end
+
+    def delete_manga_from_list(manga_id)
+      authorized!
+      @http.delete("manga/#{manga_id}/my_list_status", headers)
     end
 
     private
