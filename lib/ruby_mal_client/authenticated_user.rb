@@ -59,9 +59,26 @@ module RubyMalClient
       @http.delete("manga/#{manga_id}/my_list_status", headers)
     end
 
+    def access_token=(access_token)
+      @access_token = access_token
+      auth.access_token = access_token
+    end
+
+    def access_token
+      @access_token
+    end
+
+    def refresh_token=(refresh_token)
+      auth.refresh_token = refresh_token
+    end
+
+    def refresh_token
+      auth.refresh_token
+    end
+
     private
 
-    attr_reader :auth, :access_token
+    attr_reader :auth
 
     def headers
       @headers ||= { "Authorization" => "Bearer #{access_token}" }

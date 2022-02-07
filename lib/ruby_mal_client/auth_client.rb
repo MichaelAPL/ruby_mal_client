@@ -6,8 +6,8 @@ module RubyMalClient
   class AuthClient
     AUTH_URL = "https://myanimelist.net/v1/oauth2/"
 
-    attr_reader :code_verifier, :access_token, :refresh_token
-    attr_accessor :auth_code
+    attr_reader :code_verifier
+    attr_accessor :auth_code, :access_token, :refresh_token
 
     def initialize
       raise MissingCredentialsError unless RubyMalClient.configuration.credentials?
